@@ -13,7 +13,7 @@
 # Create a clc_server_name variable combining a distinctive tag and the first
 # characters of the server_group_tag
 - set_fact:
-     clc_server_name: "{{ [ distinctive_tag, server_group_tag ] | join | truncate(6, True, '') }}"
+     clc_server_name: "{{ [ distinctive_tag, server_group_tag ] | join | truncate(6, True, '', 0) }}"
 
 ##########
 # The initial play to create a set of servers in the server_group.  This play
